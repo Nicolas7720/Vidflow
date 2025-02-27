@@ -36,9 +36,7 @@ npm install -g json-server
 
 3. Iniciar a API localmente:
 
-json-server --watch db.json --port 3000
-
-(Substitua db.json pelo nome do seu arquivo JSON, se necessário)
+json-server --watch backend/videos.json
 
 
 4. Abrir index.html no navegador
