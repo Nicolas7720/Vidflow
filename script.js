@@ -31,15 +31,16 @@ buscarMostrarVideos();
 const barraDePesquisa = document.querySelector(".pesquisar__input")
 barraDePesquisa.addEventListener("input", () => {
     const videos = document.querySelectorAll(".videos__item")
-    if(barraDePesquisa.value != ""){
+    if (barraDePesquisa.value != ""){
         videos.forEach((video) => {
-            let titulo = video.querySelector(".titulo-video").textContent.toLowerCase()
-            let valorFiltro = barraDePesquisa.value.toLowerCase()
-            if (!titulo.includes(valorFiltro)){
+            const title = video.querySelector(".titulo-video").textContent.toLowerCase()
+            const pesquisa = barraDePesquisa.value.toLowerCase()
+            if(!title.includes(pesquisa)){
                 video.style.display = "none"
             } else {
                 video.style.display = "block"
             }
+
         })
     } else {
         videos.style.display = "block"
