@@ -26,7 +26,7 @@ Interação com os elementos da página
 
 1. Clonar o repositório:
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/Nicolas7720/Vidflow
 
 
 2. Instalar o JSON Server (caso esteja utilizando ele para servir a API):
