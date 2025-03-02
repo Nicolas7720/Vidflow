@@ -2,9 +2,9 @@ const containerVideos = document.querySelector(".videos__container");
 
 async function buscarMostrarVideos() {
   try {
-    const busca = await axios.get("http://localhost:3000/videos");
+    const busca = await fetch("http://localhost:3000/videos");
     // fetch retorna uma promise = promessa que busca dados e quando chegar, ela faz algo
-    const videos = busca.data
+    const videos = await busca.json()
     videos.forEach((video) => {
       if (video.categoria == "") {
         throw new Error("Vídeo não tem Categoria");
